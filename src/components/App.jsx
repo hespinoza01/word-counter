@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Indicator from './Indicator';
 import TextBox from './TextBox';
+import './App.css';
 
 export default class App extends Component{
   constructor(){
@@ -33,10 +34,10 @@ export default class App extends Component{
 
   render(){
     return(
-      <div>
+      <div className="App">
         <Indicator counter={this.state.counter}/>
         <TextBox onChange={this.handleTextChange} value={this.state.textContent} />
-        <button onClick={this.handleClear}>Limpiar caja de texto</button>
+        <button className="btnClear" onClick={this.handleClear}>Limpiar caja de texto</button>
       </div>
     );
   }
