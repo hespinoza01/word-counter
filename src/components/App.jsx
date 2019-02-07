@@ -17,7 +17,7 @@ export default class App extends Component{
 
   handleTextChange(e){
     let value = e.target.value,
-        counter = (value.length > 0) ? value.split(' ').length : 0;
+        counter = (value.length > 0) ? value.replace(/\s+$/,"").split(' ').length : 0;
 
     this.setState({
         textContent: value,
